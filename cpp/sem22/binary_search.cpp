@@ -18,7 +18,7 @@ void bindu ::input()
 {
     cout << "Enter array limit: ";
     cin >> n;
-    cout << "Enter the sorted array item: ";
+    cout << "Enter the sorted / Unsorted array item: ";
     for (i = 1; i <= n; i++)
     {
         cin >> data[i];
@@ -40,6 +40,13 @@ void bindu::sorting()
             }
         }
     }
+    cout << endl
+         << "After sorting : ";
+    for (ptr = 1; ptr <= n; ptr++)
+    {
+        cout << data[ptr] << ", ";
+    }
+    cout << endl;
 }
 
 void bindu ::search()
