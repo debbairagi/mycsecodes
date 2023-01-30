@@ -33,3 +33,22 @@ VALUES('Banani branch', 'Dhaka', '700K');
 INSERT INTO account(account_number,branch_name,balance)
 VALUES('A-001','Gulshan branch', '25K');
 
+CREATE TABLE info(
+    id int PRIMARY KEY NOT NULL,
+    name varchar(20),
+    batch varchar(20),
+    major varchar(20),
+    blood_Group char(10),
+    phone_number int(11),
+    email_address varchar(20)
+);
+
+CREATE TABLE info(
+    id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    name varchar(20),
+    batch varchar(20),
+    major varchar(20),
+    blood_Group char(10),
+    phone_number int(11),
+    email_address varchar(20)
+);
