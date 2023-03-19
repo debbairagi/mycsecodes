@@ -7,13 +7,20 @@ CREATE TABLE branch(
 
 
 INSERT INTO branch(branch_name,branch_city,assets)
-VALUES('Agrabad branch', 'Chittagong', '900K');
+VALUES('Khulna branch', 'Khulna', 900000);
 
 INSERT INTO branch(branch_name,branch_city,assets)
-VALUES('Khulshi branch', 'Chittagong', '500K');
+VALUES('Jessore branch', 'Jessore', 500000);
 
 INSERT INTO branch(branch_name,branch_city,assets)
-VALUES('Gulshan branch', 'Dhaka', '1000K');
+VALUES('Koyra branch', 'Khulna', 1000000);
+
+INSERT INTO branch(branch_name,branch_city,assets)
+VALUES('Dumuria branch', 'Khulna', 7000000);
+
+INSERT INTO branch(branch_name,branch_city,assets)
+VALUES('Gournodi branch', 'Barisal', 400000);
+
 
 
 CREATE TABLE account(
@@ -21,34 +28,23 @@ CREATE TABLE account(
     branch_name char(20),
     balance int,
     PRIMARY KEY(account_number),
-    FOREIGN KEY(branch_name) REFERENCES branch(branch_name));
+    FOREIGN KEY(branch_name) REFERENCES branch(branch_name)
+);
 
 
 INSERT INTO account(account_number,branch_name,balance)
-VALUES('A-001','Gulshan branch', '25K');
-
-INSERT INTO branch(branch_name,branch_city,assets)
-VALUES('Banani branch', 'Dhaka', '700K');
+VALUES('A-001','Khulna branch', 25000);
 
 INSERT INTO account(account_number,branch_name,balance)
-VALUES('A-001','Gulshan branch', '25K');
+VALUES('A-002','Gournodi branch', 35000);
 
-CREATE TABLE info(
-    id int PRIMARY KEY NOT NULL,
-    name varchar(20),
-    batch varchar(20),
-    major varchar(20),
-    blood_Group char(10),
-    phone_number int(11),
-    email_address varchar(20)
-);
+INSERT INTO account(account_number,branch_name,balance)
+VALUES('A-003','Dumuria branch', 15000);
 
-CREATE TABLE info(
-    id int AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    name varchar(20),
-    batch varchar(20),
-    major varchar(20),
-    blood_Group char(10),
-    phone_number int(11),
-    email_address varchar(20)
-);
+INSERT INTO account(account_number,branch_name,balance)
+VALUES('A-004','Koyra branch', 45000);
+
+INSERT INTO account(account_number,branch_name,balance)
+VALUES('A-005','Jessore branch', 70000);
+
+
